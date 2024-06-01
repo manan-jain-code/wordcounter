@@ -43,7 +43,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-// document.querySelector('h1').addEventListener('mouseover', function() {
-//     document.body.style.cursor = 'url(C:/Users/manan/OneDrive/Desktop/All/Clubs/ISTE Word counter/my word counter/pop_cat_closed.png), auto';
-// });
