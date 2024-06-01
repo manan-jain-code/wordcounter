@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         content.style.display = "block";
         setTimeout(() => {
             content.style.opacity = "1";
-        }, 100); // small delay to trigger the opacity transition
+        }, 100); 
         }
     });
 });
