@@ -14,14 +14,13 @@
     justify-content: center;
     gap: 2rem;
     overflow: hidden;
-    /* cursor: url('popcorn-svgrepo-com.svg'), auto; */
   }
   
   h1{
     text-align:center;
     font-size: 55px;
     opacity: 0;
-    animation: fadeIn 2s forwards, shrinkMoveUp 2.5s ; /*Combined shrinking and moving up*/
+    animation: fadeIn 2s forwards, shrinkMoveUp 2.5s ; 
     background: linear-gradient(90deg, red, blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -33,11 +32,11 @@
   @keyframes fadeIn {
     0% {
       opacity: 0;
-      transform: translateY(0);  /*Added to reset translateY */
+      transform: translateY(0);  
     }
     100% {
       opacity: 1;
-      transform: translateY(0); /*Added to reset translateY */
+      transform: translateY(0); 
     }
   }
   
@@ -47,8 +46,8 @@
       font-size: 65px;
     }
     100% {
-      transform: translateY(0px);  /*Move up to top of the page */
-      font-size: 55px; /* Reduced size after moving up */
+      transform: translateY(0px); 
+      font-size: 55px; 
     }
   }
 
@@ -61,9 +60,9 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    opacity: 0; /*initial opacity set to 0*/
-    animation: fadeIn 5s forwards; /* Animation for the container */
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Added box shadow */
+    opacity: 0;
+    animation: fadeIn 5s forwards; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); 
     border: 1px solid black;
   }
   
@@ -90,13 +89,6 @@
     outline: none;
     border: 0;
   }
-
-  /* ::selection {
-    background-color: #000000;
-    Black background color
-    color: #ffffff; 
-    White text color
-  } */
   
   .output-container {
     display: flex;
@@ -129,9 +121,9 @@
     position:relative;
     width: 100%;
     display:flex;
-    flex-wrap: wrap; /* Allow the bubbles to wrap to the next line */
-    justify-content: space-between; /* Distribute bubbles evenly across the width */
-    z-index: -1; /* Send bubbles to the back */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    z-index: -1; 
   }
   .bubbles span{
     position:relative;
@@ -164,29 +156,29 @@
   }
 
   label {
-    width: 100px; /* Adjusted the width to better fit the toggle */
-    height: 50px; /* Adjusted the height to better fit the toggle */
+    width: 100px;
+    height: 50px; 
     position: relative;
     display: block;
     background: #ebebeb;
-    border-radius: 50px; /* Adjusted to make it circular */
+    border-radius: 50px; 
     box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
     cursor: pointer;
-    overflow: hidden; /* Ensure icons don't overflow */
+    overflow: hidden; 
 }
 
 
 label:after {
     content: "";
-    width: 40px; /* Adjusted the size to fit within the toggle */
-    height: 40px; /* Adjusted the size to fit within the toggle */
+    width: 40px;
+    height: 40px; 
     position: absolute;
-    top: 5px; /* Centered vertically */
-    left: 5px; /* Centered initially */
+    top: 5px; 
+    left: 5px;
     background: linear-gradient(180deg, #ffcc89, #d8860b);
-    border-radius: 50%; /* Make it circular */
+    border-radius: 50%;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
-    transition: 0.3s; /* Smooth transition */
+    transition: 0.3s; 
 }
 input {
     width: 0;
@@ -198,7 +190,7 @@ input:checked + label {
     background: #242424;
 }
 input:checked + label:after {
-    left: 55px; /* Move to the other side when checked */
+    left: 55px; 
     background: linear-gradient(180deg, #777, #3a3a3a);
 }
 label, label:after {
@@ -224,20 +216,20 @@ input:checked + label + .background {
 
 label svg {
     position: absolute;
-    width: 24px; /* Adjusted the size to fit within the toggle */
-    height: 24px; /* Adjusted the size to fit within the toggle */
-    top: 13px; /* Centered vertically */
+    width: 24px; 
+    height: 24px;
+    top: 13px; 
     z-index: 100;
 }
   
 label svg.sun {
-    left: 15px; /* Adjust the left position to place it correctly */
+    left: 15px; 
     fill: #fff;
     transition: 0.3s;
 }
   
 label svg.moon {
-    right: 15px; /* Use right position instead of left for better alignment */
+    right: 15px;
     fill: #7e7e7e;
     transition: 0.3s;
 }
@@ -253,9 +245,9 @@ input:checked + label svg.moon {
 #darkmode-toggle,
 label[for="darkmode-toggle"] {
     position: fixed;
-    bottom: 20px; /* Adjust the distance from the bottom */
-    right: 20px; /* Adjust the distance from the right */
-    z-index: 1000; /* Ensure it stays on top */
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
 }
 
 label[for="darkmode-toggle"] {
